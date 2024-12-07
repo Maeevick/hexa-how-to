@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --experimental-strip-types src/setup.ts",
-    "test": "node --experimental-strip-types --test src/setup.test.ts"
+    "start": "node --experimental-strip-types src/index.ts",
+    "test": "node --experimental-strip-types --test src/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/Maeevick/hexa-how-to#readme",
   "devDependencies": {
-    "@types/node": "^22.10.1",
-    "tsx": "^4.19.2"
+    "@types/node": "^22.10.1"
   }
 }
