@@ -1,0 +1,31 @@
+{
+  "name": "hexa-how-to",
+  "version": "1.0.0",
+  "description": "Examples to illustrate my articles on my newsletter Marevick's Bazaar (https://maeevick.substack.com)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-strip-types src/setup.ts",
+    "test": "node --experimental-strip-types --test src/setup.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Maeevick/hexa-how-to.git"
+  },
+  "keywords": [
+    "Hexagonal",
+    "Architecture",
+    "Newsletter",
+    "How-To"
+  ],
+  "author": "Maeevick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maeevick/hexa-how-to/issues"
+  },
+  "homepage": "https://github.com/Maeevick/hexa-how-to#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2"
+  }
+}
