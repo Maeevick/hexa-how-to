@@ -1,10 +1,8 @@
 # Hexa: How To
 
-Examples to illustrate my articles in my newsletter Marevick's Bazaar (https://maeevick.substack.com)
+Examples to illustrate my articles in my newsletter Marevick's Bazaar (https://maeevick.substack.com/t/hexagonalarchitecture)
 
 ## Branch dedicated to "Hexagonal Architecture: How To #2": A Simple Case from Scratch
-
-Link to the newsletter episode: coming soon
 
 We follow the "official" blueprint from Alistair Cockburn's Hexagonal Architecture Explained.
 
@@ -59,3 +57,34 @@ According to Alistair Cockburn's terminology, here we have:
 - The Test Doubles defined in the Test Suite _(which also acts as the Configurator)_ are used as **Secondary Actors** without **Secondary Adapters** _(at this point)_
 
 There is no Configurator for the application expect the Test Suite _(at this point again)_
+
+### Step 2: Real-to-Test
+
+We are switching the Primary Actor from Test Suite to HTTP API (as a Web Server Backend) for this example.
+
+According to Alistair Cockburn's terminology, here we have:
+
+- The HTTP Request through HTTP Server is the **Primary Actor**
+- The HTTP Router (to keep the example simple) is the **Primary Adapter**
+- The **Primary Port** and the **Secondary Port** stay the same, it's the principle!
+- The **Secondary Actors** and the **Secondary Adapters** don't change in this step (still the Test Doubles but extracted from the Test Suite)
+
+Try it:
+
+```shell
+# Health Check
+curl http://localhost:3000
+
+> {"hello":"port & adapters"}
+```
+
+```shell
+# Use case
+curl \
+-H 'Content-Type: application/json' \
+-X POST \
+-d '{ "characterId": "char", "opponentId": "opp" }' \
+http://localhost:3000/fight
+
+> {"winner":"Chewbacca the Wookie wins"}
+```

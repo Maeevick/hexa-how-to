@@ -1,3 +1,5 @@
+// AS EXPECTED THIS FILE HASN'T BEEN CHANGED
+
 // Domain data structures
 // No problem with duplication because I don't know if Character and Opponent data structures will stays the same.
 export type Character = {
