@@ -6,7 +6,7 @@ import { forLaunchingADice } from "./forLaunchingADice.ts";
 import {
   forPickingTheOpponent,
   forRetrievingTheCharacter,
-} from "./characterRepository.double.ts";
+} from "./characterRepository.ts";
 
 const fastify = Fastify({
   logger: true,
