@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-strip-types src/index.ts",
-    "test": "node --experimental-strip-types --test src/*.test.ts"
+    "test": "node --experimental-strip-types --test src/*.test.ts",
+    "spec": "node --experimental-strip-types --test src/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,14 @@
   },
   "homepage": "https://github.com/Maeevick/hexa-how-to#readme",
   "devDependencies": {
-    "@types/node": "^22.10.1"
+    "@types/node": "^22.10.1",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.30.2"
   },
   "dependencies": {
-    "fastify": "^5.2.0"
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
+    "fastify": "^5.2.0",
+    "pg": "^8.13.1"
   }
 }
